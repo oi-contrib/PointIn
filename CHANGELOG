@@ -1,0 +1,11 @@
+v0.1.0:
+    date:2024-05-25
+    changes:
+      - 初始化版本
+        1、基础方法
+          * setPoint 设置点击点
+        2、判断是否在集合体中方法
+          * arc 弧形
+          * circle 圆
+          * polygon 多边形
+          * rect 矩形

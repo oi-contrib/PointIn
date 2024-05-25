@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试用例</title>
+    <script src="../node_modules/vislite/lib/index.umd.min.js"></script>
+    <script src="../dist/PointIn.js"></script>
+    <style>
+        #root {
+            width: 700px;
+            height: 500px;
+            outline: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        var el = document.getElementById("root"), painter = new VISLite.Canvas(el);
+
+        // Arc1
+        painter.config({
+            fillStyle: "red"
+        }).fillArc(200, 200, 50, 120, 1, 2)
+
+            // Arc2
+            .fillArc(200, 200, 50, 120, 5, 2)
+
+            // Arc3
+            .config({
+                fillStyle: "pink"
+            }).fillArc(300, 300, 50, 120, -1.5, 2)
+
+            // Rect1
+            .config({
+                strokeStyle: "blue"
+            }).strokeRect(150, 150, 40, 100)
+
+            // Polygon1
+            .config({
+                strokeStyle: "yellow"
+            }).beginPath().moveTo(200, 200).lineTo(250, 300).lineTo(400, 200).lineTo(150, 100).lineTo(350, 300).lineTo(600, 240).closePath().stroke();
+
+        var pointIn = new PointIn();
+        
+        el.addEventListener("click", function (event) {
+            console.log("\n\n\n当前点击位置：(" + event.offsetX + "," + event.offsetY + ")");
+
+            // var pointIn = new PointIn(event.offsetX, event.offsetY);
+            pointIn.setPoint(event.offsetX, event.offsetY);
+
+            console.log("Arc1：" + pointIn.arc(200, 200, 50, 120, 1, 2));
+            console.log("Arc2：" + pointIn.arc(200, 200, 50, 120, 5, 2));
+            console.log("Arc3：" + pointIn.arc(300, 300, 50, 120, -1.5, 2));
+            console.log("Rect1：" + pointIn.rect(150, 150, 40, 100));
+            console.log("Polygon1：" + pointIn.polygon([
+                [200, 200], [250, 300], [400, 200], [150, 100], [350, 300], [600, 240]
+            ]));
+
+        });
+
+    </script>
+</body>
+
+</html>

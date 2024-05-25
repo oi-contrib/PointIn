@@ -1,0 +1,35 @@
+{
+  "name": "pointin",
+  "version": "0.1.0",
+  "description": "计算点是否存在于几何体等中（纯粹的数值计算库）",
+  "main": "dist/PointIn.min.js",
+  "typings": "./types/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "start": "npm install && npm run dev",
+    "dev": "devby --run \"rollup --config ./rollup.config.js -w\" \"devby -s 20000\"",
+    "build": "rollup --config ./rollup.config.js && terser ./dist/PointIn.js --compress --mangle --output ./dist/PointIn.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oi-contrib/PointIn.git"
+  },
+  "keywords": [
+    "PointIn"
+  ],
+  "author": {
+    "name": "zxl20070701",
+    "url": "https://zxl20070701.github.io/notebook/home.html"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oi-contrib/PointIn/issues"
+  },
+  "homepage": "https://github.com/oi-contrib/PointIn",
+  "devDependencies": {
+    "devby": "^0.7.0-alpha.2",
+    "rollup": "^4.6.1",
+    "terser": "^5.17.1",
+    "vislite": "^0.8.1"
+  }
+}
