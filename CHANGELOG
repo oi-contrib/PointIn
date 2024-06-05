@@ -9,3 +9,9 @@ v0.1.0:
           * circle 圆
           * polygon 多边形
           * rect 矩形
+v0.1.1:
+    date:2024-06-03
+    changes:
+      - 修复bug
+        1、修复types定义错误
+          （class写成interface导致ts环境下new时报错）

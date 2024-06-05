@@ -1,11 +1,11 @@
-export default interface PointIn {
+export default class PointIn {
 
     /**
      * 创建PointIn实例
      * @param x 点击点横坐标
      * @param y 点击点纵坐标
      */
-    new(x?: number, y?: number): this
+    constructor(x?: number, y?: number)
 
     /**
      * 设置点击点坐标
