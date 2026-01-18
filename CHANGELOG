@@ -15,3 +15,8 @@ v0.1.1:
       - 修复bug
         1、修复types定义错误
           （class写成interface导致ts环境下new时报错）
+v0.1.2:
+    date:2026-01-18
+    changes:
+      - 修复bug
+        1、修复rect不支持负数问题

@@ -1,6 +1,6 @@
 {
   "name": "pointin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "计算点是否存在于几何体等中（纯粹的数值计算库）",
   "main": "dist/PointIn.min.js",
   "typings": "./types/index.d.ts",

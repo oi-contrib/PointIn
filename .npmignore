@@ -6,3 +6,4 @@
 package-lock.json
 test
 rollup.config.js
+*.tgz
